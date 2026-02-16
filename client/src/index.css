@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Lexend", sans-serif;
+    background-color: #101922;
+    color: #f8fafc;
+  }
+}
+
+.glass-card {
+  background: rgba(35, 54, 72, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon-glow-primary {
+  box-shadow: 0 0 15px rgba(19, 127, 236, 0.3);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(19, 127, 236, 0.4);
+}
+
+.neon-border {
+  border: 1px solid rgba(19, 127, 236, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.wave-glow {
+  filter: drop-shadow(0 0 8px rgba(19, 127, 236, 0.6));
+}
+
+.progress-bar-glow {
+  box-shadow: 0 0 10px rgba(19, 127, 236, 0.6);
+}
+
+.victory-glow {
+  text-shadow: 0 0 30px rgba(19, 127, 236, 0.4);
+}
+
+.defeat-glow {
+  text-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #233648;
+  border-radius: 10px;
+}
+
+.podium-1 {
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+}
+
+.podium-2 {
+  border: 2px solid #c0c0c0;
+  box-shadow: 0 0 20px rgba(192, 192, 192, 0.15);
+}
+
+.podium-3 {
+  border: 2px solid #cd7f32;
+  box-shadow: 0 0 20px rgba(205, 127, 50, 0.15);
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
